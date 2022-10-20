@@ -9,11 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var verticalCollectionView: UICollectionView!
+    @IBOutlet weak var horizantalCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        verticalCollectionView.delegate = self
+        verticalCollectionView.dataSource = self
+        
+        horizantalCollectionView.delegate = self
+        horizantalCollectionView.dataSource = self
     }
 
 
@@ -22,7 +26,10 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        if collectionView == verticalCollectionView {
+            return 5
+        }
+        return 14
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
