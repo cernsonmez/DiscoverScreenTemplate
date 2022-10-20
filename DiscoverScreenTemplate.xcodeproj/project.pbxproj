@@ -13,6 +13,7 @@
 		1492CD102900A92E0019CD7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1492CD0E2900A92E0019CD7E /* Main.storyboard */; };
 		1492CD122900A9300019CD7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1492CD112900A9300019CD7E /* Assets.xcassets */; };
 		1492CD152900A9300019CD7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1492CD132900A9300019CD7E /* LaunchScreen.storyboard */; };
+		14B8CEDD2901C7BF00B1EF09 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B8CEDC2901C7BF00B1EF09 /* MainCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1492CD112900A9300019CD7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1492CD142900A9300019CD7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1492CD162900A9300019CD7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14B8CEDC2901C7BF00B1EF09 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				1492CD112900A9300019CD7E /* Assets.xcassets */,
 				1492CD132900A9300019CD7E /* LaunchScreen.storyboard */,
 				1492CD162900A9300019CD7E /* Info.plist */,
+				14B8CEDC2901C7BF00B1EF09 /* MainCollectionViewCell.swift */,
 			);
 			path = DiscoverScreenTemplate;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				1492CD0D2900A92E0019CD7E /* ViewController.swift in Sources */,
 				1492CD092900A92E0019CD7E /* AppDelegate.swift in Sources */,
 				1492CD0B2900A92E0019CD7E /* SceneDelegate.swift in Sources */,
+				14B8CEDD2901C7BF00B1EF09 /* MainCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
