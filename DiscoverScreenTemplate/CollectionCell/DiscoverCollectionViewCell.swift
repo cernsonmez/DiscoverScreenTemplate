@@ -16,5 +16,9 @@ class DiscoverCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-
+    @IBInspectable var cornerRadius: CGFloat = 0.0 {
+        didSet {
+            layer.cornerRadius = cornerRadius
+        }
+    }
 }
