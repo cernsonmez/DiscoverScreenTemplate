@@ -9,50 +9,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var verticalCollectionView: UICollectionView!
-    @IBOutlet weak var horizantalCollectionView: UICollectionView!
+    @IBOutlet weak var collectionTableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        verticalCollectionView.delegate = self
-        verticalCollectionView.dataSource = self
-        
-        horizantalCollectionView.delegate = self
-        horizantalCollectionView.dataSource = self
+        collectionTableView.delegate = self
+        collectionTableView.dataSource = self
     }
-
-
 }
 
-extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == verticalCollectionView {
-            return 5
-        }
-        return 14
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-                
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as? MainCollectionViewCell {
-            
-            cell.imageView.image = UIImage(named: "new_picture")
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = collectionTableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as? MainTableViewCell {
+    
             return cell
             
         } else {
-            return UICollectionViewCell()
+            return UITableViewCell()
         }
     }
     
-}
-
-extension ViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let width = self.view.frame.width - 16.0 * 2
-        let height: CGFloat = 234.0
-        
-        return CGSize(width: width, height: height)
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200.0
     }
 }
