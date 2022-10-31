@@ -42,13 +42,3 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return 200.0
     }
 }
-
-struct Model {
-    let text: String
-    let image: String
-    
-    init(text: String, image: String) {
-        self.text = text
-        self.image = image
-    }
-}

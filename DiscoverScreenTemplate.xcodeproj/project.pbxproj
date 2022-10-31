@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142238B62910381A00C5FE8E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142238B52910381A00C5FE8E /* Model.swift */; };
 		14682CC629033A78002E3140 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14682CC429033A78002E3140 /* MainTableViewCell.swift */; };
 		14682CC729033A78002E3140 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14682CC529033A78002E3140 /* MainTableViewCell.xib */; };
 		14682CCA29033AB7002E3140 /* DiscoverCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14682CC829033AB7002E3140 /* DiscoverCollectionViewCell.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		142238B52910381A00C5FE8E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		14682CC429033A78002E3140 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		14682CC529033A78002E3140 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 		14682CC829033AB7002E3140 /* DiscoverCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		142238B42910380C00C5FE8E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				142238B52910381A00C5FE8E /* Model.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		14682CC2290339FF002E3140 /* TableCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 		1492CD072900A92E0019CD7E /* DiscoverScreenTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				142238B42910380C00C5FE8E /* Data */,
 				14682CC329033A07002E3140 /* CollectionCell */,
 				14682CC2290339FF002E3140 /* TableCell */,
 				1492CD082900A92E0019CD7E /* AppDelegate.swift */,
@@ -171,6 +182,7 @@
 				14682CCA29033AB7002E3140 /* DiscoverCollectionViewCell.swift in Sources */,
 				1492CD0D2900A92E0019CD7E /* ViewController.swift in Sources */,
 				1492CD092900A92E0019CD7E /* AppDelegate.swift in Sources */,
+				142238B62910381A00C5FE8E /* Model.swift in Sources */,
 				1492CD0B2900A92E0019CD7E /* SceneDelegate.swift in Sources */,
 				14682CC629033A78002E3140 /* MainTableViewCell.swift in Sources */,
 			);
