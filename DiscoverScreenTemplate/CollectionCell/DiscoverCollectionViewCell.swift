@@ -10,6 +10,7 @@ import UIKit
 class DiscoverCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var textView: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,5 +21,10 @@ class DiscoverCollectionViewCell: UICollectionViewCell {
         didSet {
             layer.cornerRadius = cornerRadius
         }
+    }
+    
+    public func configure(with model: Model) {
+        self.textView.text = model.text
+        self.imageView.image = UIImage(named: model.image)
     }
 }

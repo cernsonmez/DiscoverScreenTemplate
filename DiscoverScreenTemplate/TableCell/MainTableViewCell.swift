@@ -10,6 +10,7 @@ import UIKit
 class MainTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    var cellModels = [Model]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,22 +25,27 @@ class MainTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configure(with models: [Model]) {
+        self.cellModels = models
+    }
+    
 }
 
 extension MainTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return cellModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
                 
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DiscoverCollectionViewCell", for: indexPath) as? DiscoverCollectionViewCell {
-            
-            cell.imageView.image = UIImage(named: "new_picture")
+            cell.configure(with: cellModels[indexPath.row])
+//            cell.imageView.image = UIImage(named: "new_picture")
             return cell
             
         } else {
             return UICollectionViewCell()
         }
     }
+    
 }
